@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 모든 숫자의 곱이 모든숫자의 합의 제곱보다 작으면 1 크면 0
+   function solution(num_list) {
+    let product = 1; // 모든 숫자의 곱
+    let sum = 0;     // 모든 숫자의 합
+    for (let i = 0; i < num_list.length; i++) { 
+        product *= num_list[i];
+        sum += num_list[i];
+    }
+    return product < sum ** 2 ? 1 : 0;
+}
+</script>
+</html>
