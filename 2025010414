@@ -1,0 +1,16 @@
+// 문자열 여러번 뒤집기기
+function solution(my_string, queries) {
+    var answer = '';
+    for(let i = 0; i<queries.length; i++){
+        let start = queries[i][0]
+        let end = queries[i][1]
+        
+        let num1 = my_string.slice(0,start)
+        let num2 = my_string.slice(end + 1)
+        // 이거 주의 !
+        let num3 = my_string.slice(start,end+1).split("").reverse().join('')
+            my_string = num1 + num3 + num2
+        
+    }
+    return my_string;
+}

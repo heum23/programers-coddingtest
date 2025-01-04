@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //이어 붙인 수수
+    function solution(num_list) {
+    let add1 = "";
+    let add2 = "";
+    for(let i =0;i < num_list.length; i++){
+        if(num_list[i] % 2 === 0){
+            add2 += num_list[i];
+        }else add1 += num_list[i];
+    }return Number(add1) + Number(add2)
+    
+}
+</script>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    // 배열 만들기
+function solution(arr) {
+    let stk = [];  // 스택을 초기화
+    let i = 0;     //  i를 0으로 초기화
+    //while 문 사용법 연습하기 !
+    while (i < arr.length) {//조건문
+        if (stk.length === 0) {
+            stk.push(arr[i]);
+            i++;  // 증감문
+        } else if (stk[stk.length - 1] < arr[i]) {
+            stk.push(arr[i]);
+            i++;  // 증감문
+        } else {
+            stk.pop();  // 스택의 마지막 원소를 제거
+        }
+    }
+
+    return stk;  // 최종적으로 스택을 반환
+}
+</script>

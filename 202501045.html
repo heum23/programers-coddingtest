@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function solution(numLog) {
+    let word = ""
+    for(let i = 0; i<numLog.length; i++){
+        if(numLog[i] === numLog[i+1] - 1){
+            word += "w"
+        }else if(numLog[i] === numLog[i+1] + 1){
+            word += "s"
+        }else if(numLog[i] === numLog[i+1] - 10){
+            word += "d"
+        }else if(numLog[i] === numLog[i+1] + 10){
+            word += "a"
+        }
+    } return word
+}s
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //수열과 구간 쿼리 3
+    function solution(arr, queries) {
+   
+   for(let i = 0; i < queries.length; i++){
+    // queries 의 형태 queries[0] = querie[1,2]
+        let j = queries[i][0];
+        let k = queries[i][1];
+       if(queries[i] === arr[j],arr[k]){
+        //배열 순서 바꾸기 !!
+           [arr[j],arr[k]] = [arr[k],arr[j]];
+       }
+   }return arr
+}
+</script>
+</html>
