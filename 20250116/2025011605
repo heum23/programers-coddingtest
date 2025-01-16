@@ -1,0 +1,11 @@
+//접미사인지 확인하기
+function solution(my_string, is_suffix) {
+    var answer = 0;
+    for(let i = 0; i < my_string.length; i++){
+        let word = my_string.slice(i)
+        if(is_suffix === word){
+            answer = 1
+        }
+    }
+    return answer;
+}

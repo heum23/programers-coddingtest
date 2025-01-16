@@ -1,0 +1,10 @@
+//접미사 배열
+function solution(my_string) {
+    var answer = [];
+    for(i = 0 ; i < my_string.length; i++){
+       let result = my_string.slice(i)
+        answer.push(result)
+         
+    }
+    return answer.sort();
+}

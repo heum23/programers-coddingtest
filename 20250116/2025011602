@@ -1,0 +1,10 @@
+//부분 문자열 이어 붙여 문자열 만들기
+function solution(my_strings, parts) {
+    var answer = '';
+    for(let i = 0; i < parts.length; i++ ){
+          let num1 = parts[i][0]
+          let num2 = parts[i][1]
+        answer += my_strings[i].slice(num1,num2+1)
+    }
+    return answer;
+}

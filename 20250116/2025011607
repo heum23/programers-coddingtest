@@ -1,0 +1,18 @@
+//세로 읽기
+function solution(my_string, m, c) {
+    var answer = [];
+    let result = ""
+    for(let i = 0; i < my_string.length ; i += m){
+        let arr = my_string.slice(i , i+m)
+        answer.push(arr)
+    }
+    let correct = ""
+    let last = ""
+    result += answer.map(str => str[c-1])
+    
+    correct = result.split(",")
+    for(let i =0; i< correct.length; i++){
+        last += correct[i]
+    }
+    return last;
+}
