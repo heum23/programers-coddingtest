@@ -1,4 +1,4 @@
-// 존ㄴ나 쉬운 문제 뭐였는지 기억도 안남남
+// 존ㄴ나 쉬운 문제 뭐였는지 기억도 안남
 function solution(start_num, end_num) {
    let answer = []
    for(let i =start_num; i <= end_num; i++){
