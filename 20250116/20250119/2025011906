@@ -1,0 +1,6 @@
+function solution(arr, idx) {
+  var answer = 0;
+  let a = arr.indexOf(1, idx);
+  return a;
+}
+//가까운 1 찾기

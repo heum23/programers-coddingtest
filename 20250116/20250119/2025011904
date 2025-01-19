@@ -1,0 +1,11 @@
+function solution(my_string, indices) {
+  var answer = "";
+  let a = my_string.split("");
+  for (let i = 0; i < a.length; i++) {
+    if (!indices.includes(i)) {
+      answer += a[i];
+    }
+  }
+  return answer;
+}
+// 글자 지우기

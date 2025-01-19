@@ -1,0 +1,6 @@
+function solution(num_list) {
+  var answer = 0;
+  let a = num_list.findIndex((num) => num < 0);
+  return a;
+}
+// 첫번째로 나오는 음수

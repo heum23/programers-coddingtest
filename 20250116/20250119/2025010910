@@ -1,0 +1,10 @@
+function solution(arr) {
+    let firstIndex = arr.indexOf(2);  // 첫 번째 2의 위치
+    let lastIndex = arr.lastIndexOf(2);  // 마지막 2의 위치
+    if (firstIndex === -1){
+        return [-1]   
+    }
+  ;2가 없으면 -1 반환 
+    return arr.slice(firstIndex, lastIndex + 1);  // 첫 번째 2부터 마지막 2까지 자르기
+}
+; 2의 영역
