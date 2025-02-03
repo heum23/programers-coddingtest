@@ -1,0 +1,17 @@
+//왼쪽 오른쪽
+
+function solution(str_list) {
+  let a = str_list.indexOf("l"); // "l"이 처음 등장하는 인덱스
+  let b = str_list.indexOf("r"); // "r"이 처음 등장하는 인덱스
+
+  // "l"과 "r"이 모두 없는 경우 빈 배열 반환
+  if (a === -1 && b === -1) return [];
+
+  // "l"이 먼저 나오거나 "r"이 존재하지 않는 경우 → "l" 앞부분 반환
+  if (b === -1 || (a !== -1 && a < b)) {
+    return str_list.slice(0, a);
+  }
+
+  // "r"이 먼저 나오면 "r" 이후 부분 반환
+  return str_list.slice(b + 1);
+}

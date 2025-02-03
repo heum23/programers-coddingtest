@@ -1,0 +1,17 @@
+; 1로 만들기
+function solution(num_list) {
+    let answer = 0;
+
+    num_list.forEach((num) => {
+        while (num !== 1) { // num이 1이 될 때까지 반복
+            if (num % 2 === 0) {
+                num /= 2; // 짝수일 경우 2로 나누기
+            } else {
+                num = (num - 1) / 2; // 홀수일 경우 1을 빼고 2로 나누기
+            }
+            answer += 1; // 연산 횟수 증가
+        }
+    });
+
+    return answer;
+}

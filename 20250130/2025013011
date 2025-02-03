@@ -1,0 +1,24 @@
+; //조건에 맞게 수열 변환하기
+function solution(arr) {
+    let count = 0; // 변환 횟수 저장
+    let prevArr = [...arr]; // 배열 복사
+
+    for (let i = 0; i < arr.length * 100; i++) { // 충분한 반복 횟수를 보장 (안전 장치)
+        let newArr = prevArr.map(num => { 
+            if (num >= 50 && num % 2 === 0) return num / 2; // 50 이상 & 짝수 → 2로 나누기
+            if (num < 50 && num % 2 === 1) return num * 2 + 1; // 50 미만 & 홀수 → 2를 곱하고 +1
+            return num; // 위 조건에 해당하지 않으면 그대로 유지
+        });
+
+        if (JSON.stringify(prevArr) === JSON.stringify(newArr)) { 
+            // 배열이 변하지 않으면 중단하고 count 반환
+            return count;
+        }
+
+        prevArr = newArr; // 새로운 배열로 업데이트
+        count++; // 변환 횟수 증가
+    }
+
+    return count; // 안전 장치 (최대 반복 횟수 초과 시 반환)
+}
+

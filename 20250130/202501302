@@ -1,0 +1,8 @@
+// n번째 원소부터
+function solution(num_list, n) {
+  var answer = [];
+  let a = num_list.slice(n - 1);
+  console.log(a);
+
+  return a;
+}
