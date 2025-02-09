@@ -1,0 +1,10 @@
+// 문자열이 몇 번 등장하는지 세기
+function solution(myString, pat) {
+  let count = 0;
+  let pos = myString.indexOf(pat);
+  while (pos !== -1) {
+    count++;
+    pos = myString.indexOf(pat, pos + 1); // 다음 문자부터 다시 검색
+  }
+  return count;
+}

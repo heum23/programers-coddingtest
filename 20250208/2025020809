@@ -1,0 +1,12 @@
+// ad 제거하기
+function solution(strArr) {
+  var answer = [];
+
+  for (let i = 0; i < strArr.length; i++) {
+    let cut = strArr[i].indexOf("ad");
+    if (cut == -1) {
+      answer.push(strArr[i]);
+    }
+  }
+  return answer;
+}

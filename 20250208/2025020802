@@ -1,0 +1,14 @@
+//원하는 문자열 찾기
+function solution(myString, pat) {
+  var answer = 0;
+  let string1 = myString.toLowerCase();
+  let pat1 = pat.toLowerCase();
+  let case1 = string1.indexOf(pat1);
+  console.log(case1);
+  if (case1 === -1) {
+    answer = 0;
+  } else {
+    answer = 1;
+  }
+  return answer;
+}

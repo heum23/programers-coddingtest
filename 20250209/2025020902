@@ -1,0 +1,6 @@
+// 문자열 잘라서 정렬하기
+function solution(myString) {
+  var answer = myString.split("x").sort();
+  answer = answer.filter((item) => item.trim() !== "");
+  return answer;
+}

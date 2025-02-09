@@ -1,0 +1,9 @@
+// x 사이의 개수
+function solution(myString) {
+  var answer = myString.split("x");
+  let correct = [];
+  for (let i = 0; i < answer.length; i++) {
+    correct.push(answer[i].length);
+  }
+  return correct;
+}
