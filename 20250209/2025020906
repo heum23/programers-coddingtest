@@ -1,0 +1,6 @@
+//세 개의 구분자
+function solution(myStr) {
+  //split[/[abc]/] = 'a' 'b' 'c'를 따로 구분
+  let result = myStr.split(/[abc]/).filter((str) => str !== "");
+  return result.length ? result : ["EMPTY"];
+}

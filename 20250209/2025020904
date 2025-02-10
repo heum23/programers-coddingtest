@@ -1,0 +1,18 @@
+// 문자열 바꿔서 찾기
+function solution(myString, pat) {
+  var answer = myString.split("");
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i] === "A") {
+      answer[i] = "B";
+    } else if (answer[i] === "B") {
+      answer[i] = "A";
+    }
+  }
+  let count = answer.join("").indexOf(pat);
+  if (count === -1) {
+    answer = 0;
+  } else {
+    answer = 1;
+  }
+  return answer;
+}

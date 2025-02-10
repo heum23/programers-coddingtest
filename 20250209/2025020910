@@ -1,0 +1,17 @@
+function solution(arr, k) {
+  var answer = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (answer.indexOf(arr[i]) === -1) {
+      // 중복 제거
+      answer.push(arr[i]);
+    }
+    if (answer.length === k) break; // k개의 요소가 채워지면 종료
+  }
+
+  while (answer.length < k) {
+    answer.push(-1); // 부족한 부분은 -1로 채움
+  }
+
+  return answer;
+}
