@@ -1,0 +1,5 @@
+//0 떼기
+function solution(n_str) {
+  const result = parseInt(n_str, 10); // 10은 10진수로 변환하겠다는 의미
+  return String(result);
+}

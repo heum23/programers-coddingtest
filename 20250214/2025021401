@@ -1,0 +1,25 @@
+// 문자열 묶기
+function solution(strArr) {
+  // 길이를 기준으로 문자열의 개수를 세기 위한 Map
+  const lengthMap = new Map();
+  
+  // 배열을 순회하면서 각 문자열의 길이에 해당하는 개수를 세기
+  strArr.forEach(str => {
+    const length = str.length;
+    if (lengthMap.has(length)) {
+      lengthMap.set(length, lengthMap.get(length) + 1);
+    } else {
+      lengthMap.set(length, 1);
+    }
+  });
+
+  // 가장 큰 개수를 찾기
+  let maxCount = 0;
+  lengthMap.forEach(count => {
+    if (count > maxCount) {
+      maxCount = count;
+    }
+  });
+
+  return maxCount;
+}

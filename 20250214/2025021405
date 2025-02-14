@@ -1,0 +1,12 @@
+// 전국 대회 선발 고사
+function solution(rank, attendance) {
+  const answer = [];
+  for (let i = 0; i < rank.length; i++) {
+    if (attendance[i]) {
+      answer.push(rank[i]);
+    }
+  }
+  let result = answer.sort((a, b) => a - b).slice(0, 3);
+  let result1 = result.map((item) => rank.indexOf(item));
+  return 10000 * result1[0] + 100 * result1[1] + result1[2];
+}

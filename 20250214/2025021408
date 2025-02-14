@@ -1,0 +1,8 @@
+//문자열 정수의 합
+function solution(num_str) {
+  let num = 0;
+  var answer = num_str.split("").map((item) => {
+    num += Number(item);
+  });
+  return num;
+}

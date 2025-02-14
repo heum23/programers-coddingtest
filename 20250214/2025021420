@@ -1,0 +1,11 @@
+// 조건에 맞게 수열 변환하기3
+function solution(arr, k) {
+  let answer = arr.map((item) => {
+    if (k % 2 === 1) {
+      return (item *= k);
+    } else {
+      return (item += k);
+    }
+  });
+  return answer;
+}

@@ -1,0 +1,21 @@
+// 특별한 이차원 배열 1
+function solution(n) {
+  // n x n 크기의 배열 생성
+  let result = [];
+
+  // n개의 행을 생성
+  for (let i = 0; i < n; i++) {
+    let row = [];
+
+    // 각 행에 대해 n개의 열을 생성
+    for (let j = 0; j < n; j++) {
+      // 주대각선(i == j)에는 1, 그 외에는 0
+      row.push(i === j ? 1 : 0);
+    }
+
+    // 생성된 행을 result 배열에 추가
+    result.push(row);
+  }
+
+  return result;
+}

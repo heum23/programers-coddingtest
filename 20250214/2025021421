@@ -1,0 +1,13 @@
+//l로 만들기
+function solution(myString) {
+  var answer = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+  let num = myString.split("");
+  let result = num.map((item) => {
+    if (answer.includes(item)) {
+      return (item = "l");
+    } else {
+      return (item = item);
+    }
+  });
+  return result.join("");
+}

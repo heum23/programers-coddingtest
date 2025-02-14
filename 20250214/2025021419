@@ -1,0 +1,21 @@
+// 그림확대
+function solution(picture, k) {
+    // 새로운 배열을 저장할 변수
+    let result = [];
+
+    // picture의 각 행을 처리
+    for (let i = 0; i < picture.length; i++) {
+        // 각 행을 가로로 k배 확대
+        let expandedRow = '';
+        for (let char of picture[i]) {
+            expandedRow += char.repeat(k);  // 문자를 k번 반복
+        }
+
+        // 가로로 확대된 행을 세로로 k배 확장
+        for (let j = 0; j < k; j++) {
+            result.push(expandedRow);  // 세로로 k번 반복
+        }
+    }
+
+    return result;
+}

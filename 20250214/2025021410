@@ -1,0 +1,4 @@
+// 두 수의 합
+function solution(a, b) {
+  return (BigInt(a) + BigInt(b)).toString(); // 더한 값을 문자열로 변환하여 반환
+}
