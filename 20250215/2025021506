@@ -1,0 +1,14 @@
+// 다음에 올 숫자
+function solution(common) {
+    var answer = 0;
+   for(let i=0; i< 1000; i++){
+    if(common[0]*i === common[1] && common[1]*i === common[2]){
+        return common[common.length-1] * i
+    }else if(common[0] + i === common[1]&& common[1] +i===common[2]){
+   return common[common.length-1] + i}
+       else if(common[0] - i === common[1]&& common[1] -i===common[2]){
+            return common[common.length-1] - i
+       }  else if(common[0] * -i === common[1]&& common[1] * -i===common[2]){
+            return common[common.length-1] * -i
+       }
+}}
