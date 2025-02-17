@@ -1,0 +1,16 @@
+// 옹알이
+function solution(babbling) {
+  var answer = 0;
+  let mouth = ["aya", "ye", "woo", "ma"];
+  for (let i = 0; i < babbling.length; i++) {
+    let temp = babbling[i];
+    for (let j = 0; j < mouth.length; j++) {
+      let num1 = babbling[i].includes(mouth[j]);
+      if (num1) {
+        temp = temp.replace(mouth[j], "");
+        temp === "" ? (answer += 1) : (answer += 0);
+      }
+    }
+  }
+  return answer;
+}

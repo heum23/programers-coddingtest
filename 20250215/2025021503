@@ -1,0 +1,21 @@
+// 정사각형의 만들기
+function solution(arr) {
+    let rowCount = arr.length;
+    let colCount = arr[0].length;
+
+    // 열이 더 많을 경우 행 추가
+    if (rowCount < colCount) {
+        while (arr.length < colCount) {
+            arr.push(new Array(colCount).fill(0)); // 새로운 행을 추가
+        }
+    }
+
+    // 행이 더 많을 경우 각 행에 0 추가
+    arr.forEach((item) => {
+        while (item.length < rowCount) {
+            item.push(0); // 각 행의 길이를 맞추기 위해 0을 추가
+        }
+    });
+
+    return arr;
+}
